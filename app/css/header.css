@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  padding: 0.5em 0;
+  border-bottom: 0.12em solid #F4F5F7; }
+  .header--logo {
+    flex-grow: 1; }
+    .header--logo-image {
+      padding-left: 3vw;
+      height: 2.1em; }
+  .header--creatures {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 3; }
+    .header--creatures-list-item {
+      float: left;
+      padding: 0 1.3em; }
+    .header--creatures-button {
+      padding: 0.4em 0.7em;
+      border-radius: 0.3em;
+      margin-left: 10em;
+      background-color: #AC1072;
+      color: #FFF;
+      font-weight: bold; }
+  .header--user {
+    flex-grow: 1; }
+    .header--user-avatar {
+      float: left;
+      height: 2.1em; }
+    .header--user-data {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0.3em;
+      height: 2.1em; }
+    .header--user-name {
+      font-weight: bold; }
+    .header--user-description {
+      font-size: 0.8em; }

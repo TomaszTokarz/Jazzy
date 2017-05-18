@@ -1,0 +1,55 @@
+@import 'settings';
+
+.gnome {
+    width: 80%;
+    background-color: $white;
+    margin: auto;
+    border-bottom: 0.08em solid $creatures-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--details {
+        display: flex;
+        align-items: center;
+    }
+
+    &--logo {
+        padding: 0.5em 0.7em;
+
+        & img{
+            height: 3em;
+        }
+    }
+
+    &--info {
+    }
+
+    &--name {
+        float: left;
+        font-weight: bold;
+    }
+
+    &--age {
+        float: left;
+        clear: left;
+        width: 100%;
+    }
+
+    &--attribute {
+        @include progress-bar(12em, 0.5em);
+        display: flex;
+        align-items: center;
+
+        &-percentage {
+            display: inline-block;
+            width: 3.5em;
+            margin: 0 0.5em;
+        }
+
+        &-name {
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+    }
+}

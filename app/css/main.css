@@ -1,0 +1,12 @@
+.body {
+  font-family: 'nerislight';
+  font-size: 20px;
+  color: #2A0633;
+  background-color: #F9FAFC; }
+
+.main {
+  margin: 0 2em; }
+  .main-title {
+    margin: 2em 0;
+    font-size: 1.5em;
+    font-weight: bold; }

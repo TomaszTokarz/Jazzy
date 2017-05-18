@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tomasz Tokarz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jazzy</title>
+
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body class="body">
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="js-header-container"></div>
+    <div class="main js-main-container"></div>
+
+    <div class="templates-container">
+
+        <script type="text/template" id="header-template">
+            <header class="header" id="header">
+                <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
+                <div class="header--creatures">
+                    <ul class="header--creatures-list">
+                        <li class="header--creatures-list-item">Gnomes</li>
+                        <li class="header--creatures-list-item">Trolls</li>
+                    </ul>
+                    <div class="header--creatures-button">Create monster</div>
+                </div>
+                <div class="header--user">
+                    <img src="images/avatar.png" class="header--user-avatar"></img>
+                    <div class="header--user-data">
+                        <span class="header--user-name">Robert Łabuś</span>
+                        <span class="header--user-description">Game Master</span>
+                    </div>
+                </div>
+            </header>
+        </script>
+
+        <script type="text/template" id="gnomes-template">
+            <h1 class="main-title">Gnomes</h1>
+            <ul class="js-gnomes-list"></ul>
+        </script>
+
+        <script type="text/template" id="gnomes-list-template">
+            <div class="gnome--details">
+                <figure class="gnome--logo"><img src="images/gnome.png"></img></figure>
+                <div class="gnome--info">
+                    <span class="gnome--name"><%= name %></span>
+                    <span class="gnome--age">Age: <%= age %></span>
+                </div>
+            </div>
+            <div class="gnome--attribute">
+                <progress class="gnome--attribute-bar" max="100" value="<%= strenght %>"></progress>
+                <span class="gnome--attribute-percentage"><%= strenght %>/100</span>
+                <span class="gnome--attribute-name">Strenght</span>
+            </div>
+        </script>
+
+    </div>
+
+        <!-- <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script> -->
+
+    <script src="js/main.min.js"></script>
+
+</body>
+</html>

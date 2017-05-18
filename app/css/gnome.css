@@ -1,0 +1,50 @@
+.gnome {
+  width: 80%;
+  background-color: #FFF;
+  margin: auto;
+  border-bottom: 0.08em solid #E5E5F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .gnome--details {
+    display: flex;
+    align-items: center; }
+  .gnome--logo {
+    padding: 0.5em 0.7em; }
+    .gnome--logo img {
+      height: 3em; }
+  .gnome--name {
+    float: left;
+    font-weight: bold; }
+  .gnome--age {
+    float: left;
+    clear: left;
+    width: 100%; }
+  .gnome--attribute {
+    display: flex;
+    align-items: center; }
+    .gnome--attribute progress[value] {
+      width: 12em;
+      height: 0.5em;
+      -webkit-appearance: none;
+      appearance: none; }
+    .gnome--attribute progress {
+      border-radius: 0.25em;
+      background-color: #ECEEF1;
+      border: 0; }
+    .gnome--attribute progress[value]::-webkit-progress-bar {
+      background-color: #ECEEF1;
+      border-radius: 0.25em; }
+    .gnome--attribute progress[value]::-webkit-progress-value {
+      border-radius: 0.25em;
+      background-color: #AC1171; }
+    .gnome--attribute progress::-moz-progress-bar {
+      background-color: #AC1171;
+      border-radius: 0.25em; }
+    .gnome--attribute-percentage {
+      display: inline-block;
+      width: 3.5em;
+      margin: 0 0.5em; }
+    .gnome--attribute-name {
+      font-weight: bold;
+      margin-right: 0.5em; }

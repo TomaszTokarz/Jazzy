@@ -1,0 +1,44 @@
+
+$main-color: #AC1072;
+$font-color: #2A0633;
+$header-border-color: #F4F5F7;
+$creatures-border: #E5E5F1;
+$white: #FFF;
+$background-color: #F9FAFC;
+
+$strenght-bar-main-color: #AC1171;
+$strenght-bar-bright-color: #D6A5C8;        // probably useless
+$strenght-bar-background-color: #ECEEF1;
+
+
+@mixin progress-bar($width, $height) {
+    progress[value] {
+        width: $width;
+        height: $height;
+        -webkit-appearance: none;
+       appearance: none;
+    }
+
+    progress {
+        border-radius: $height/2;
+        background-color: $strenght-bar-background-color;
+        border: 0;
+    }
+
+    progress[value]::-webkit-progress-bar {
+
+      background-color: $strenght-bar-background-color;
+      border-radius: $height/2;
+    }
+
+    progress[value]::-webkit-progress-value {
+
+        border-radius: $height/2;
+        background-color: $strenght-bar-main-color;
+    }
+
+    progress::-moz-progress-bar {
+        background-color: $strenght-bar-main-color;
+        border-radius: $height/2;
+    }
+}
