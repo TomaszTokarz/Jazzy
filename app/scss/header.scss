@@ -2,26 +2,38 @@
 
 .header {
     width: 100%;
-
+    font-size: 13px;
     position: fixed;
     top: 0;
     background-color: $white;
-    padding: 0.5em 0;
-    border-bottom: 0.12em solid $header-border-color;
+    height: $header-height;
+    border-bottom: 2px solid $border-color-light;
+    z-index: 100;
 
     &--wrapper {
-        width: $wrapper-width;
+        max-width: $wrapper-width;
+        min-width: $wrapper-min-width;
+        height: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin: 0 auto;
+
+        &-left {
+            display: flex;
+            align-items: center;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &--logo {
-        flex-grow: 1;
 
         &-image {
-            padding-left: 3vw;
-            height: 2.1em;
+            height: 36px;
         }
     }
 
@@ -29,19 +41,19 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        flex-grow: 3;
+        margin-left: 165px;
 
         &-list {
 
             &-item {
                 float: left;
-                padding: 0 1.3em;
+                margin-right: 59px;
             }
         }
         &-button {
-            padding: 0.4em 0.7em;
-            border-radius: 0.3em;
-            margin-left: 10em;
+            padding: 12px 17px;
+            border-radius: 6px;
+            margin-right: 48px;
             background-color: $main-color;
             color: $white;
             font-weight: bold;
@@ -49,11 +61,12 @@
     }
 
     &--user {
-        flex-grow: 1;
+        display: flex;
+        align-items: center;
 
         &-avatar {
             float: left;
-            height: 2.1em;
+            height: 40px;
         }
 
         &-data {
@@ -61,8 +74,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 0.3em;
-            height: 2.1em;
+            padding-left: 10px;
+            width: 140px;
+            font-size: 11px;
         }
 
         &-name {
@@ -70,7 +84,6 @@
         }
 
         &-description {
-            font-size: 0.8em;
         }
     }
 }

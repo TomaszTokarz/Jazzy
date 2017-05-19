@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jazzy</title>
     
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
@@ -31,19 +33,23 @@
         <script type="text/template" id="header-template">
             <header class="header">
                 <div class="header--wrapper">
-                    <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
-                    <div class="header--creatures">
-                        <ul class="header--creatures-list">
-                            <li class="header--creatures-list-item">Gnomes</li>
-                            <li class="header--creatures-list-item">Trolls</li>
-                        </ul>
-                        <div class="header--creatures-button">Create monster</div>
+                    <div class="header--wrapper-left">
+                        <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
+                        <div class="header--creatures">
+                            <ul class="header--creatures-list">
+                                <li class="header--creatures-list-item">Gnomes</li>
+                                <li class="header--creatures-list-item">Trolls</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="header--user">
-                        <img src="images/avatar.png" class="header--user-avatar"></img>
-                        <div class="header--user-data">
-                            <span class="header--user-name">Robert Łabuś</span>
-                            <span class="header--user-description">Game Master</span>
+                    <div class="header--wrapper-right">
+                        <div class="header--creatures-button">Create monster</div>
+                        <div class="header--user">
+                            <img src="images/avatar.png" class="header--user-avatar"></img>
+                            <div class="header--user-data">
+                                <span class="header--user-name">Robert Łabuś</span>
+                                <span class="header--user-description">Game Master</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +72,11 @@
                 </div>
             </div>
             <div class="gnome--attribute">
-                <progress class="gnome--attribute--bar" max="100" value="<%= strenght %>"></progress>
+                <!-- <progress class="gnome--attribute--bar" max="100" value="<%= strenght %>"></progress> -->
+                <div class="progress-bar">
+                    <div class="progress-bar--indicator-main"></div>
+                    <div class="progress-bar--indicator-secondary"></div>
+                </div>
                 <span class="gnome--attribute--percentage"><%= strenght %>/100</span>
                 <span class="gnome--attribute--name">Strenght</span>
             </div>

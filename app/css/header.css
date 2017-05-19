@@ -1,48 +1,56 @@
 .header {
   width: 100%;
+  font-size: 13px;
   position: fixed;
   top: 0;
   background-color: #FFF;
-  padding: 0.5em 0;
-  border-bottom: 0.12em solid #F4F5F7; }
+  height: 60px;
+  border-bottom: 2px solid #F4F5F7;
+  z-index: 100; }
   .header--wrapper {
-    width: 1174px;
+    max-width: 1174px;
+    min-width: 875px;
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0 auto; }
-  .header--logo {
-    flex-grow: 1; }
-    .header--logo-image {
-      padding-left: 3vw;
-      height: 2.1em; }
+    .header--wrapper-left {
+      display: flex;
+      align-items: center; }
+    .header--wrapper-right {
+      display: flex;
+      align-items: center; }
+  .header--logo-image {
+    height: 36px; }
   .header--creatures {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-grow: 3; }
+    margin-left: 165px; }
     .header--creatures-list-item {
       float: left;
-      padding: 0 1.3em; }
+      margin-right: 59px; }
     .header--creatures-button {
-      padding: 0.4em 0.7em;
-      border-radius: 0.3em;
-      margin-left: 10em;
+      padding: 12px 17px;
+      border-radius: 6px;
+      margin-right: 48px;
       background-color: #AC1072;
       color: #FFF;
       font-weight: bold; }
   .header--user {
-    flex-grow: 1; }
+    display: flex;
+    align-items: center; }
     .header--user-avatar {
       float: left;
-      height: 2.1em; }
+      height: 40px; }
     .header--user-data {
       float: left;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 0.3em;
-      height: 2.1em; }
+      padding-left: 10px;
+      width: 140px;
+      font-size: 11px; }
     .header--user-name {
       font-weight: bold; }
-    .header--user-description {
-      font-size: 0.8em; }

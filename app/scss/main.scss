@@ -1,18 +1,30 @@
+@import 'reset';
 @import 'settings';
 
+@import 'header';
+@import 'gnome';
+
 .body {
-    font-family: 'nerislight';
+    font-family: 'Play', sans-serif;
+
+    letter-spacing: 1px;
     font-size: 20px;
     color: $font-color;
     background-color: $background-color;
 }
 
+.templates-container {
+    display: none;
+}
+
 .main {
-    margin: 0 2em;
+    max-width: $wrapper-width;
+    min-width: $wrapper-min-width;
+    margin: 140px auto;
 
     &-title {
-        margin: 2em 0;
-        font-size: 1.5em;
+        font-size: 18px;
         font-weight: bold;
+        margin-bottom: 27px;
     }
 }

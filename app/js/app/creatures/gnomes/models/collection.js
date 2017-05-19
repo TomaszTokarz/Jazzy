@@ -4,8 +4,6 @@ var GnomesCollection = Backbone.Collection.extend({
 
 
     initialize: function(options) {
-
-        // var that = this;
         if (options && options.fetch) {
             this.fetch({
                 success: function() {

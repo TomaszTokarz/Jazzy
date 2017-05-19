@@ -1,12 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  width: 100%;
+  font-size: 13px;
+  position: fixed;
+  top: 0;
+  background-color: #FFF;
+  height: 60px;
+  border-bottom: 2px solid #F4F5F7;
+  z-index: 100; }
+  .header--wrapper {
+    max-width: 1174px;
+    min-width: 875px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; }
+    .header--wrapper-left {
+      display: flex;
+      align-items: center; }
+    .header--wrapper-right {
+      display: flex;
+      align-items: center; }
+  .header--logo-image {
+    height: 36px; }
+  .header--creatures {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 165px; }
+    .header--creatures-list-item {
+      float: left;
+      margin-right: 59px; }
+    .header--creatures-button {
+      padding: 12px 17px;
+      border-radius: 6px;
+      margin-right: 48px;
+      background-color: #AC1072;
+      color: #FFF;
+      font-weight: bold; }
+  .header--user {
+    display: flex;
+    align-items: center; }
+    .header--user-avatar {
+      float: left;
+      height: 40px; }
+    .header--user-data {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      width: 140px;
+      font-size: 11px; }
+    .header--user-name {
+      font-weight: bold; }
+
+.gnome {
+  background-color: #FFF;
+  height: 65px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid #F4F5F7;
+  border-right: 1px solid #F4F5F7;
+  border-bottom: 1px solid #E5E5F1; }
+  .gnome:first-child, .gnome:last-child {
+    border-radius: 8px; }
+  .gnome--details {
+    display: flex;
+    align-items: center; }
+    .gnome--details--image {
+      padding: 0 14px 0 16px;
+      height: 46px; }
+      .gnome--details--image img {
+        height: 45px; }
+    .gnome--details--name {
+      font-size: 11px;
+      float: left;
+      font-weight: bold; }
+    .gnome--details--age {
+      font-size: 9px;
+      padding-top: 5px;
+      float: left;
+      clear: left;
+      width: 100%; }
+  .gnome--attribute {
+    display: flex;
+    align-items: center;
+    font-size: 11px; }
+    .gnome--attribute .progress-bar {
+      width: 200px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #ECEEF1;
+      position: relative; }
+      .gnome--attribute .progress-bar--indicator-main {
+        width: 0;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #AC1171;
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
+      .gnome--attribute .progress-bar--indicator-secondary {
+        width: 0;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #D6A5C8;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
+    .gnome--attribute--percentage {
+      text-align: right;
+      display: inline-block;
+      width: 67px;
+      padding-right: 16px; }
+    .gnome--attribute--name {
+      font-weight: bold;
+      margin-right: 16px; }
+
 .body {
-  font-family: 'nerislight';
+  font-family: 'Play', sans-serif;
+  letter-spacing: 1px;
   font-size: 20px;
   color: #2A0633;
   background-color: #F9FAFC; }
 
+.templates-container {
+  display: none; }
+
 .main {
-  margin: 0 2em; }
+  max-width: 1174px;
+  min-width: 875px;
+  margin: 140px auto; }
   .main-title {
-    margin: 2em 0;
-    font-size: 1.5em;
-    font-weight: bold; }
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 27px; }

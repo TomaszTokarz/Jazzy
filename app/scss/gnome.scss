@@ -1,33 +1,40 @@
 @import 'settings';
 
 .gnome {
-    width: 80%;
     background-color: $white;
+    height: 65px;
     margin: auto;
-    border-bottom: 0.08em solid $creatures-border;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include list-border;
+
+    &:first-child, &:last-child {
+        border-radius: 8px;
+    }
 
     &--details {
         display: flex;
         align-items: center;
 
         &--image {
-            padding: 0.5em 0.7em;
-            height: 3em;
+            padding: 0 14px 0 16px;
+            height: 46px;
 
             & img{
-                height: 3em;
+                height: 45px;
             }
         }
 
         &--name {
+            font-size: 11px;
             float: left;
             font-weight: bold;
         }
 
         &--age {
+            font-size: 9px;
+            padding-top: 5px;
             float: left;
             clear: left;
             width: 100%;
@@ -35,19 +42,21 @@
     }
 
     &--attribute {
-        @include progress-bar(12em, 0.5em);
         display: flex;
         align-items: center;
+        font-size: 11px;
+        @include progress-bar(200px, 10px);
 
         &--percentage {
+            text-align: right;
             display: inline-block;
-            width: 3.5em;
-            margin: 0 0.5em;
+            width: 67px;
+            padding-right: 16px;
         }
 
         &--name {
             font-weight: bold;
-            margin-right: 0.5em;
+            margin-right: 16px;
         }
     }
 }
