@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jazzy</title>
 
+    <link rel="shortcut icon" href="favicon.ico" >
+
     <!--build:css css/styles.min.css-->
         <link rel="stylesheet" href="css/app.css">
     <!-- endbuild -->
@@ -23,26 +25,30 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="js-header-container"></div>
-    <div class="main js-main-container"></div>
+    <div class="js-app-container"></div>
 
     <div class="templates-container">
-
+        <script type="text/template" id="layout-template">
+            <div class="js-header-container"></div>
+            <div class="main js-main-container"></div>
+        </script>
         <script type="text/template" id="header-template">
-            <header class="header" id="header">
-                <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
-                <div class="header--creatures">
-                    <ul class="header--creatures-list">
-                        <li class="header--creatures-list-item">Gnomes</li>
-                        <li class="header--creatures-list-item">Trolls</li>
-                    </ul>
-                    <div class="header--creatures-button">Create monster</div>
-                </div>
-                <div class="header--user">
-                    <img src="images/avatar.png" class="header--user-avatar"></img>
-                    <div class="header--user-data">
-                        <span class="header--user-name">Robert Łabuś</span>
-                        <span class="header--user-description">Game Master</span>
+            <header class="header">
+                <div class="header--wrapper">
+                    <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
+                    <div class="header--creatures">
+                        <ul class="header--creatures-list">
+                            <li class="header--creatures-list-item">Gnomes</li>
+                            <li class="header--creatures-list-item">Trolls</li>
+                        </ul>
+                        <div class="header--creatures-button">Create monster</div>
+                    </div>
+                    <div class="header--user">
+                        <img src="images/avatar.png" class="header--user-avatar"></img>
+                        <div class="header--user-data">
+                            <span class="header--user-name">Robert Łabuś</span>
+                            <span class="header--user-description">Game Master</span>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -55,16 +61,22 @@
 
         <script type="text/template" id="gnomes-list-template">
             <div class="gnome--details">
-                <figure class="gnome--logo"><img src="images/gnome.png"></img></figure>
-                <div class="gnome--info">
-                    <span class="gnome--name"><%= name %></span>
-                    <span class="gnome--age">Age: <%= age %></span>
+                <figure class="gnome--details--image">
+                    <img src="images/gnome.png" />
+                </figure>
+                <div class="gnome--details--info">
+                    <span class="gnome--details--name"><%= name %></span>
+                    <span class="gnome--details--age">Age: <%= age %></span>
                 </div>
             </div>
             <div class="gnome--attribute">
-                <progress class="gnome--attribute-bar" max="100" value="<%= strenght %>"></progress>
-                <span class="gnome--attribute-percentage"><%= strenght %>/100</span>
-                <span class="gnome--attribute-name">Strenght</span>
+                <!-- <progress class="gnome--attribute--bar" max="100" value="<%= strenght %>"></progress> -->
+                <div class="progress-bar">
+                    <div class="progress-bar--indicator-main"></div>
+                    <div class="progress-bar--indicator-secondary"></div>
+                </div>
+                <span class="gnome--attribute--percentage"><%= strenght %>/100</span>
+                <span class="gnome--attribute--name">Strenght</span>
             </div>
         </script>
 
@@ -78,21 +90,17 @@
         <script src="bower_components/backbone/backbone.js"></script>
         <script src="bower_components/backbone.radio/build/backbone.radio.js"></script>
         <script src="bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
-        <!-- <script src="bower_components/backbonefire/dist/backbonefire.js"></script> -->
 
-        <!-- <script src="js/app/creatures/gnoms/models/model.js"></script> -->
+        <script src="js/app/common/views/layout.js"></script>
+        <script src="js/app/common/views/header.js"></script>
+
         <script src="js/app/creatures/gnomes/models/model.js"></script>
         <script src="js/app/creatures/gnomes/models/collection.js"></script>
         <script src="js/app/creatures/gnomes/views/item.js"></script>
         <script src="js/app/creatures/gnomes/views/list.js"></script>
 
-        <script src="js/app/common/views/layout.js"></script>
-
-        <script src="js/app/routers/routers.controller.js"></script>
-        <script src="js/app/routers/app.router.js"></script>
 
         <script src="js/app/initialize.js"></script>
-        <!-- <script src="js/database/firebase.js"></script> -->
     <!-- endbuild -->
 
 </body>

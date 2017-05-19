@@ -12,28 +12,26 @@
     &--details {
         display: flex;
         align-items: center;
-    }
 
-    &--logo {
-        padding: 0.5em 0.7em;
-
-        & img{
+        &--image {
+            padding: 0.5em 0.7em;
             height: 3em;
+
+            & img{
+                height: 3em;
+            }
         }
-    }
 
-    &--info {
-    }
+        &--name {
+            float: left;
+            font-weight: bold;
+        }
 
-    &--name {
-        float: left;
-        font-weight: bold;
-    }
-
-    &--age {
-        float: left;
-        clear: left;
-        width: 100%;
+        &--age {
+            float: left;
+            clear: left;
+            width: 100%;
+        }
     }
 
     &--attribute {
@@ -41,13 +39,13 @@
         display: flex;
         align-items: center;
 
-        &-percentage {
+        &--percentage {
             display: inline-block;
             width: 3.5em;
             margin: 0 0.5em;
         }
 
-        &-name {
+        &--name {
             font-weight: bold;
             margin-right: 0.5em;
         }

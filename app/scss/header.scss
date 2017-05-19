@@ -2,11 +2,19 @@
 
 .header {
     width: 100%;
-    display: flex;
-    align-items: center;
+
+    position: fixed;
+    top: 0;
     background-color: $white;
     padding: 0.5em 0;
     border-bottom: 0.12em solid $header-border-color;
+
+    &--wrapper {
+        width: $wrapper-width;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
 
     &--logo {
         flex-grow: 1;

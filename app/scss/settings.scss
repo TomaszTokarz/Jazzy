@@ -10,35 +10,104 @@ $strenght-bar-main-color: #AC1171;
 $strenght-bar-bright-color: #D6A5C8;        // probably useless
 $strenght-bar-background-color: #ECEEF1;
 
+$wrapper-width: 1174px;
 
 @mixin progress-bar($width, $height) {
-    progress[value] {
+    .progress-bar {
         width: $width;
         height: $height;
-        -webkit-appearance: none;
-       appearance: none;
-    }
-
-    progress {
         border-radius: $height/2;
         background-color: $strenght-bar-background-color;
-        border: 0;
+        position: relative;
+
+
+        &--indicator-main {
+            width: 0;
+            height: $height;
+            border-radius: $height/2;
+            background-color: $strenght-bar-main-color;
+            position: absolute;
+            top: 0;
+            z-index: 20;
+        }
+
+        &--indicator-secondary {
+            width: 0;
+            height: $height;
+            border-radius: $height/2;
+            background-color: $strenght-bar-bright-color;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+        }
     }
+}
 
-    progress[value]::-webkit-progress-bar {
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+            transition: $transition;
+}
 
-      background-color: $strenght-bar-background-color;
-      border-radius: $height/2;
-    }
+// @mixin progress-bar($width, $height) {
+//     progress[value] {
+//         width: $width;
+//         height: $height;
+//         -webkit-appearance: none;
+//        appearance: none;
+//     }
+//
+//     progress {
+//         border-radius: $height/2;
+//         background-color: $strenght-bar-background-color;
+//         border: 0;
+//     }
+//
+//     progress[value]::-webkit-progress-bar {
+//
+//       background-color: $strenght-bar-background-color;
+//       border-radius: $height/2;
+//     }
+//
+//     progress[value]::-webkit-progress-value {
+//
+//         border-radius: $height/2;
+//         background-color: $strenght-bar-main-color;
+//     }
+//
+//     progress::-moz-progress-bar {
+//         background-color: $strenght-bar-main-color;
+//         border-radius: $height/2;
+//     }
+// }
 
-    progress[value]::-webkit-progress-value {
-
+@mixin progress-bar($width, $height) {
+    .progress-bar {
+        width: $width;
+        height: $height;
         border-radius: $height/2;
-        background-color: $strenght-bar-main-color;
-    }
+        background-color: $strenght-bar-background-color;
+        position: relative;
 
-    progress::-moz-progress-bar {
-        background-color: $strenght-bar-main-color;
-        border-radius: $height/2;
+        &--indicator-main {
+            width: 0;
+            height: $height;
+            border-radius: $height/2;
+            background-color: $strenght-bar-main-color;
+            position: absolute;
+            top: 0;
+            z-index: 20;
+            @include transition(all 1s ease-out);
+        }
+
+        &--indicator-secondary {
+            width: 0;
+            height: $height;
+            border-radius: $height/2;
+            background-color: $strenght-bar-bright-color;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            @include transition(all 1s ease-out);
+        }
     }
 }

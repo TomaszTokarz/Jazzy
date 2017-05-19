@@ -1,5 +1,17 @@
 var GnomesCollection = Backbone.Collection.extend({
-  model: Gnome,
-});
+    model: Gnome,
+    url: 'http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes?_format=json',
 
-gnomesCollection = new GnomesCollection();
+
+    initialize: function(options) {
+
+        // var that = this;
+        if (options && options.fetch) {
+            this.fetch({
+                success: function() {
+                    options.layoutView.renderList();
+                }.bind(this)
+            });
+        }
+    }
+});

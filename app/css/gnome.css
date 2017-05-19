@@ -9,42 +9,51 @@
   .gnome--details {
     display: flex;
     align-items: center; }
-  .gnome--logo {
-    padding: 0.5em 0.7em; }
-    .gnome--logo img {
+    .gnome--details--image {
+      padding: 0.5em 0.7em;
       height: 3em; }
-  .gnome--name {
-    float: left;
-    font-weight: bold; }
-  .gnome--age {
-    float: left;
-    clear: left;
-    width: 100%; }
+      .gnome--details--image img {
+        height: 3em; }
+    .gnome--details--name {
+      float: left;
+      font-weight: bold; }
+    .gnome--details--age {
+      float: left;
+      clear: left;
+      width: 100%; }
   .gnome--attribute {
     display: flex;
     align-items: center; }
-    .gnome--attribute progress[value] {
+    .gnome--attribute .progress-bar {
       width: 12em;
       height: 0.5em;
-      -webkit-appearance: none;
-      appearance: none; }
-    .gnome--attribute progress {
       border-radius: 0.25em;
       background-color: #ECEEF1;
-      border: 0; }
-    .gnome--attribute progress[value]::-webkit-progress-bar {
-      background-color: #ECEEF1;
-      border-radius: 0.25em; }
-    .gnome--attribute progress[value]::-webkit-progress-value {
-      border-radius: 0.25em;
-      background-color: #AC1171; }
-    .gnome--attribute progress::-moz-progress-bar {
-      background-color: #AC1171;
-      border-radius: 0.25em; }
-    .gnome--attribute-percentage {
+      position: relative; }
+      .gnome--attribute .progress-bar--indicator-main {
+        width: 0;
+        height: 0.5em;
+        border-radius: 0.25em;
+        background-color: #AC1171;
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
+      .gnome--attribute .progress-bar--indicator-secondary {
+        width: 0;
+        height: 0.5em;
+        border-radius: 0.25em;
+        background-color: #D6A5C8;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
+    .gnome--attribute--percentage {
       display: inline-block;
       width: 3.5em;
       margin: 0 0.5em; }
-    .gnome--attribute-name {
+    .gnome--attribute--name {
       font-weight: bold;
       margin-right: 0.5em; }

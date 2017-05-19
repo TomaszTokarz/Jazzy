@@ -33,7 +33,7 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts', 'copy'],
+    ['sass', 'useref', 'images', 'fonts', 'favicon'],
     callback
   )
 });
@@ -61,9 +61,9 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 });
 
-gulp.task('copy', function() {
-  return gulp.src('app/data/**/*')
-  .pipe(gulp.dest('dist/data'))
+gulp.task('favicon', function() {
+  return gulp.src('app/*.ico')
+  .pipe(gulp.dest('dist'))
 });
 
 gulp.task('clean:dist', function() {

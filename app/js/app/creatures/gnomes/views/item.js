@@ -2,17 +2,19 @@ var GnomeItemView = Backbone.Marionette.View.extend({
     tagName: 'li',
     className: 'gnome',
 
-    template: _.template( $('#gnomes-list-template').html()),
-
     ui: {
-        // editBtn: '.js-edit-sticker',
-        // deleteBtn: '.js-delete-sticker',
-        // addToBoardBtn: '.js-add-to-board'
+        progressBarMain: ".progress-bar--indicator-main",
+        progressBarSecondary: ".progress-bar--indicator-secondary"
     },
 
-    events: {
-        // 'click @ui.editBtn': 'editSticker',
-        // 'click @ui.deleteBtn': 'deleteSticker',
-        // 'click @ui.addToBoardBtn': 'chooseBoards'
+    template: _.template( $('#gnomes-list-template').html()),
+
+    onRender: function() {
+        this.setStrengthBar(this.model.attributes.strenght);
+    },
+
+    setStrengthBar: function(primaryAttribute, secondaryAttribute) {
+        $(this.ui.progressBarMain).css("width", primaryAttribute + "%" )
+        $(this.ui.progressBarSecondary).css("width", secondaryAttribute + "%" )
     }
 });
