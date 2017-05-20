@@ -3,23 +3,28 @@ var GnomesCollectionView = Backbone.Marionette.CompositeView.extend( {
     template: _.template( $('#gnomes-template').html()),
     childViewContainer: '.js-gnomes-list',
     childView: GnomeItemView,
-    currentIndex: 0,
-    itemsPerPage: 30,
+    index: 0,
+    itemsPerPage: 20,
+    allModels: [],
 
     initialize: function(options) {
         this.collection = new GnomesCollection();
+        this.allModels = this.options.wholeCollection.models;
         this.addItems();
         this.render();
+        this.collection.on('change',this.render,this);
+        app.infiniteScroll();
     },
 
     addItems: function() {
-        for (var i = this.currentIndex; i < this.currentIndex + this.itemsPerPage; i++) {
-
-            this.collection.add(this.options.wholeCollection.models[i]);
+        for (var i = this.index; i < this.index + this.itemsPerPage; i++) {
+            this.collection.add(this.allModels[i]);
         }
-        this.currentIndex = this.currentIndex + this.itemsPerPage;
 
-        // adding more elements from console
-        // app.layout.listView.addItems()
+        if (this.index >= this.index + this.allModels.length) {
+            this.index = this.allModels.length;
+        } else {
+            this.index = this.index + this.itemsPerPage;
+        }
     }
 });

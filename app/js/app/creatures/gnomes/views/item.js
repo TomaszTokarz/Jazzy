@@ -14,7 +14,8 @@ var GnomeItemView = Backbone.Marionette.View.extend({
     },
 
     setStrengthBar: function(primaryAttribute, secondaryAttribute) {
-        $(this.ui.progressBarMain).css("width", primaryAttribute + "%" )
-        $(this.ui.progressBarSecondary).css("width", secondaryAttribute + "%" )
+        $(this.ui.progressBarMain).css("width", primaryAttribute + "%" );
+        // useless for now. There is no secondary attribute.
+        $(this.ui.progressBarSecondary).css("width", secondaryAttribute + "%" );
     }
 });

@@ -1,8 +1,8 @@
 .header {
   width: 100%;
   font-size: 13px;
-  position: fixed;
   top: 0;
+  position: fixed;
   background-color: #FFF;
   height: 60px;
   border-bottom: 2px solid #F4F5F7;
@@ -29,8 +29,8 @@
     justify-content: space-around;
     margin-left: 165px; }
     .header--creatures-list-item {
-      float: left;
-      margin-right: 59px; }
+      margin-right: 59px;
+      float: left; }
     .header--creatures-button {
       padding: 12px 17px;
       border-radius: 6px;
@@ -42,15 +42,15 @@
     display: flex;
     align-items: center; }
     .header--user-avatar {
-      float: left;
-      height: 40px; }
+      height: 40px;
+      float: left; }
     .header--user-data {
+      width: 140px;
+      font-size: 11px;
+      padding-left: 10px;
       float: left;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-left: 10px;
-      width: 140px;
-      font-size: 11px; }
+      justify-content: center; }
     .header--user-name {
       font-weight: bold; }

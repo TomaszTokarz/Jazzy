@@ -31,6 +31,10 @@
         <script type="text/template" id="layout-template">
             <div class="js-header-container"></div>
             <div class="main js-main-container"></div>
+            <div class="nav-bar js-nav-bar">
+                <div class="nav-bar-arrow"></div>
+                <span class="nav-bar-title">TOP</span>
+            </div>
         </script>
         <script type="text/template" id="header-template">
             <header class="header">
@@ -65,8 +69,8 @@
 
         <script type="text/template" id="gnomes-list-template">
             <div class="gnome--details">
-                <figure class="gnome--details--image">
-                    <img src="images/gnome.png" />
+                <figure>
+                    <img class="gnome--details--image" src="images/gnome.png" />
                 </figure>
                 <div class="gnome--details--info">
                     <span class="gnome--details--name"><%= name %></span>

@@ -5,6 +5,7 @@ $border-color: #E5E5F1;
 $border-color-light: #F4F5F7;
 $white: #FFF;
 $background-color: #F9FAFC;
+$navbar-background: rgba(50, 50 ,50 , 0.2);
 
 $strenght-bar-main-color: #AC1171;
 $strenght-bar-bright-color: #D6A5C8;
@@ -51,9 +52,23 @@ $header-height: 60px;
     }
 }
 
+@mixin animation($animation){
+    -webkit-animation: $animation;
+       -moz-animation: $animation;
+        -ms-animation: $animation;
+         -o-animation: $animation;
+            animation: $animation;
+}
+
 @mixin transition($transition) {
     -webkit-transition: $transition;
             transition: $transition;
+}
+
+@mixin rotate($degree) {
+        -ms-transform: rotate($degree);
+    -webkit-transform: rotate($degree);
+            transform: rotate($degree);
 }
 
 @mixin progress-bar($width, $height) {
@@ -87,6 +102,8 @@ $header-height: 60px;
         }
     }
 }
+
+//This mixin below is for HTML5 <progress> bar
 
 // @mixin progress-bar($width, $height) {
 //     progress[value] {

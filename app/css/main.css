@@ -48,8 +48,8 @@ table {
 .header {
   width: 100%;
   font-size: 13px;
-  position: fixed;
   top: 0;
+  position: fixed;
   background-color: #FFF;
   height: 60px;
   border-bottom: 2px solid #F4F5F7;
@@ -76,8 +76,8 @@ table {
     justify-content: space-around;
     margin-left: 165px; }
     .header--creatures-list-item {
-      float: left;
-      margin-right: 59px; }
+      margin-right: 59px;
+      float: left; }
     .header--creatures-button {
       padding: 12px 17px;
       border-radius: 6px;
@@ -89,39 +89,40 @@ table {
     display: flex;
     align-items: center; }
     .header--user-avatar {
-      float: left;
-      height: 40px; }
+      height: 40px;
+      float: left; }
     .header--user-data {
+      width: 140px;
+      font-size: 11px;
+      padding-left: 10px;
       float: left;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-left: 10px;
-      width: 140px;
-      font-size: 11px; }
+      justify-content: center; }
     .header--user-name {
       font-weight: bold; }
 
 .gnome {
+  height: 66px;
   background-color: #FFF;
-  height: 65px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
   border-left: 1px solid #F4F5F7;
   border-right: 1px solid #F4F5F7;
   border-bottom: 1px solid #E5E5F1; }
-  .gnome:first-child, .gnome:last-child {
-    border-radius: 8px; }
+  .gnome:first-child {
+    border-radius: 8px 8px 0 0; }
+  .gnome:last-child {
+    border-radius: 0 0 8px 8px; }
   .gnome--details {
     display: flex;
     align-items: center; }
     .gnome--details--image {
       padding: 0 14px 0 16px;
-      height: 46px; }
-      .gnome--details--image img {
-        height: 45px; }
+      height: 45px; }
     .gnome--details--name {
       font-size: 11px;
       float: left;
@@ -129,13 +130,13 @@ table {
     .gnome--details--age {
       font-size: 9px;
       padding-top: 5px;
+      width: 100%;
       float: left;
-      clear: left;
-      width: 100%; }
+      clear: left; }
   .gnome--attribute {
+    font-size: 11px;
     display: flex;
-    align-items: center;
-    font-size: 11px; }
+    align-items: center; }
     .gnome--attribute .progress-bar {
       width: 200px;
       height: 10px;
@@ -163,13 +164,13 @@ table {
         -webkit-transition: all 1s ease-out;
         transition: all 1s ease-out; }
     .gnome--attribute--percentage {
-      text-align: right;
-      display: inline-block;
       width: 67px;
-      padding-right: 16px; }
+      padding-right: 16px;
+      text-align: right;
+      display: inline-block; }
     .gnome--attribute--name {
-      font-weight: bold;
-      margin-right: 16px; }
+      margin-right: 16px;
+      font-weight: bold; }
 
 .body {
   font-family: 'Play', sans-serif;
@@ -182,10 +183,59 @@ table {
   display: none; }
 
 .main {
+  margin: 140px auto 30px;
   max-width: 1174px;
-  min-width: 875px;
-  margin: 140px auto; }
+  min-width: 875px; }
   .main-title {
     font-size: 18px;
+    margin-bottom: 27px;
+    font-weight: bold; }
+
+.nav-bar {
+  right: 0px;
+  bottom: 100px;
+  width: 50px;
+  height: 55px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: rgba(50, 50, 50, 0.2);
+  position: fixed;
+  cursor: pointer;
+  z-index: 200; }
+  .nav-bar-arrow {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    border-left: 8px solid #F9FAFC;
+    border-top: 8px solid #F9FAFC;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .nav-bar-title {
+    bottom: 2px;
+    left: 5px;
+    position: absolute;
     font-weight: bold;
-    margin-bottom: 27px; }
+    color: #F9FAFC; }
+  .nav-bar:hover > .nav-bar-arrow {
+    -webkit-animation: shake 1s 0.3s ease-in-out;
+    -moz-animation: shake 1s 0.3s ease-in-out;
+    -ms-animation: shake 1s 0.3s ease-in-out;
+    -o-animation: shake 1s 0.3s ease-in-out;
+    animation: shake 1s 0.3s ease-in-out; }
+
+@keyframes shake {
+  33% {
+    -ms-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  66% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  100% {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }

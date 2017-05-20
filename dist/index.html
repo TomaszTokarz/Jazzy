@@ -12,7 +12,7 @@
     <meta name="author" content="Tomasz Tokarz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jazzy</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.min.css">
@@ -29,6 +29,10 @@
         <script type="text/template" id="layout-template">
             <div class="js-header-container"></div>
             <div class="main js-main-container"></div>
+            <div class="nav-bar js-nav-bar">
+                <div class="nav-bar-arrow"></div>
+                <span class="nav-bar-title">TOP</span>
+            </div>
         </script>
         <script type="text/template" id="header-template">
             <header class="header">
@@ -63,8 +67,8 @@
 
         <script type="text/template" id="gnomes-list-template">
             <div class="gnome--details">
-                <figure class="gnome--details--image">
-                    <img src="images/gnome.png" />
+                <figure>
+                    <img class="gnome--details--image" src="images/gnome.png" />
                 </figure>
                 <div class="gnome--details--info">
                     <span class="gnome--details--name"><%= name %></span>
@@ -83,8 +87,6 @@
         </script>
 
     </div>
-
-        <!-- <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script> -->
 
     <script src="js/main.min.js"></script>
 
