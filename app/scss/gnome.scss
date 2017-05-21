@@ -3,6 +3,7 @@
 .gnome {
     height: 66px;
     background-color: $white;
+    position: relative;
     margin: auto;
     display: flex;
     align-items: center;
@@ -58,6 +59,71 @@
         &--name {
             margin-right: 16px;
             font-weight: bold;
+        }
+    }
+}
+
+.gnome-edit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+
+    &--container {
+        display: block;
+        background-color: $white;
+        border: 1px solid $main-color;
+        height: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:first-child {
+            border-radius: 8px;
+        }
+    }
+
+    &--attributes {
+        &-name-input, &-strenght-input {
+            padding: 5px;
+            font-size: 14px;
+            border: 2px solid $border-color;
+            border-radius: 6px;
+
+            &:focus {
+                border: 2px solid $main-color;
+                outline: none;
+            }
+        }
+
+        &-name-input {
+            width: 150px;
+        }
+
+        &-strenght-input {
+            width: 25px;
+            text-align: center;
+        }
+    }
+
+    &--button {
+        width: 70px;
+        padding: 10px 0;
+        margin-right: 20px;
+        display: inline-block;
+        text-align: center;
+        color: $white;
+        background-color: $main-color;
+        cursor: pointer;
+        border: 2px solid $main-color;
+        border-radius: 8px;
+        @include transition (all 0.4s ease-in-out);
+
+        &:hover {
+            color: $main-color;
+            background-color: $white;
+            border: 2px solid $main-color;
         }
     }
 }

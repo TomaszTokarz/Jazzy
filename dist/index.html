@@ -31,7 +31,6 @@
             <div class="main js-main-container"></div>
             <div class="nav-bar js-nav-bar">
                 <div class="nav-bar-arrow"></div>
-                <span class="nav-bar-title">TOP</span>
             </div>
         </script>
         <script type="text/template" id="header-template">
@@ -41,7 +40,7 @@
                         <figure class="header--logo"><img src="images/logo.png" class="header--logo-image"></img></figure>
                         <div class="header--creatures">
                             <ul class="header--creatures-list">
-                                <li class="header--creatures-list-item">Gnomes</li>
+                                <li class="header--creatures-list-item active">Gnomes</li>
                                 <li class="header--creatures-list-item">Trolls</li>
                             </ul>
                         </div>
@@ -65,7 +64,7 @@
             <ul class="js-gnomes-list"></ul>
         </script>
 
-        <script type="text/template" id="gnomes-list-template">
+        <script type="text/template" id="gnome-item-template">
             <div class="gnome--details">
                 <figure>
                     <img class="gnome--details--image" src="images/gnome.png" />
@@ -83,6 +82,28 @@
                 </div>
                 <span class="gnome--attribute--percentage"><%= strenght %>/100</span>
                 <span class="gnome--attribute--name">Strenght</span>
+            </div>
+            <div class="gnome-edit"></div>
+        </script>
+
+        <script type="text/template" id="gnome-edit-template">
+            <div class="gnome-edit--container">
+                <figure>
+                    <img class="gnome--details--image" src="images/gnome.png" />
+                </figure>
+                <span class="gnome-edit--attributes-id">ID: <%= id %></span>
+                <div>
+                    <span class="gnome-edit--attributes-name">Name: </span>
+                    <input class="gnome-edit--attributes-name-input" type="text" value="<%= name %>"></input>
+                </div>
+                <div>
+                    <span class="gnome-edit--attributes-strenght">Strenght: </span>
+                    <input class="gnome-edit--attributes-strenght-input" type="text" value="<%= strenght %>"></input>
+                </div>
+                <div class="gnome-edit--buttons">
+                    <span class="gnome-edit--button js-edit-save">Save</span>
+                    <span class="gnome-edit--button js-edit-back">Back</span>
+                </div>
             </div>
         </script>
 

@@ -30,49 +30,28 @@
 
 .nav-bar {
 
-    right: 0px;
-    bottom: 100px;
-    width: 50px;
-    height: 55px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     background-color: $navbar-background;
     position: fixed;
     cursor: pointer;
     z-index: 200;
 
     &-arrow {
-        width: 20px;
-        height: 20px;
-        top: 10px;
-        left: 10px;
+        width: 15px;
+        height: 15px;
+        top: 23px;
+        left: 18px;
         position: absolute;
         border-left: 8px solid $background-color;
         border-top: 8px solid $background-color;
         @include rotate(45deg);
     }
 
-    &-title {
-        bottom: 2px;
-        left: 5px;
-        position: absolute;
-        font-weight: bold;
-        color: $background-color;
-    }
-
     &:hover > &-arrow{
-        @include animation(shake 1s 0.3s ease-in-out);
-        @keyframes shake{
-            33% {
-                @include rotate(60deg);
-            }
-            66% {
-                @include rotate(30deg);
-            }
-            100% {
-                @include rotate(45deg);
-            }
-        }
-
+        @include animation(shake 0.8s 0.3s ease-in-out);
     }
 }

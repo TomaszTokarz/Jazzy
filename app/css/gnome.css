@@ -1,6 +1,43 @@
+@keyframes shake {
+  0% {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  33% {
+    -ms-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  66% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  100% {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@keyframes shiver {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  33% {
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg); }
+  66% {
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
 .gnome {
   height: 66px;
   background-color: #FFF;
+  position: relative;
   margin: auto;
   display: flex;
   align-items: center;
@@ -37,7 +74,7 @@
       width: 200px;
       height: 10px;
       border-radius: 5px;
-      background-color: #ECEEF1;
+      background-color: #E5E5F1;
       position: relative; }
       .gnome--attribute .progress-bar--indicator-main {
         width: 0;
@@ -67,3 +104,50 @@
     .gnome--attribute--name {
       margin-right: 16px;
       font-weight: bold; }
+
+.gnome-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30; }
+  .gnome-edit--container {
+    display: block;
+    background-color: #FFF;
+    border: 1px solid #AC1072;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .gnome-edit--container:first-child {
+      border-radius: 8px; }
+  .gnome-edit--attributes-name-input, .gnome-edit--attributes-strenght-input {
+    padding: 5px;
+    font-size: 14px;
+    border: 2px solid #E5E5F1;
+    border-radius: 6px; }
+    .gnome-edit--attributes-name-input:focus, .gnome-edit--attributes-strenght-input:focus {
+      border: 2px solid #AC1072;
+      outline: none; }
+  .gnome-edit--attributes-name-input {
+    width: 150px; }
+  .gnome-edit--attributes-strenght-input {
+    width: 25px;
+    text-align: center; }
+  .gnome-edit--button {
+    width: 70px;
+    padding: 10px 0;
+    margin-right: 20px;
+    display: inline-block;
+    text-align: center;
+    color: #FFF;
+    background-color: #AC1072;
+    cursor: pointer;
+    border: 2px solid #AC1072;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .gnome-edit--button:hover {
+      color: #AC1072;
+      background-color: #FFF;
+      border: 2px solid #AC1072; }

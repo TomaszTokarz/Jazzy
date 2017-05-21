@@ -5,11 +5,11 @@ $border-color: #E5E5F1;
 $border-color-light: #F4F5F7;
 $white: #FFF;
 $background-color: #F9FAFC;
-$navbar-background: rgba(50, 50 ,50 , 0.2);
+$navbar-background: rgba(172, 16 ,114 , 0.5);
 
 $strenght-bar-main-color: #AC1171;
 $strenght-bar-bright-color: #D6A5C8;
-$strenght-bar-background-color: #ECEEF1;
+$strenght-bar-background-color: $border-color;
 
 $wrapper-width: 1174px;
 $wrapper-min-width: 875px;
@@ -100,6 +100,36 @@ $header-height: 60px;
             z-index: 10;
             @include transition(all 1s ease-out);
         }
+    }
+}
+
+@keyframes shake{
+    0% {
+        @include rotate(45deg);
+    }
+    33% {
+        @include rotate(60deg);
+    }
+    66% {
+        @include rotate(30deg);
+    }
+    100% {
+        @include rotate(45deg);
+    }
+}
+
+@keyframes shiver{
+    0% {
+        @include rotate(0deg);
+    }
+    33% {
+        @include rotate(5deg);
+    }
+    66% {
+        @include rotate(-5deg);
+    }
+    100% {
+        @include rotate(0deg);
     }
 }
 
