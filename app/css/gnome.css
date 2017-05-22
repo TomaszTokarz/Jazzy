@@ -110,7 +110,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 30; }
+  z-index: 30;
+  opacity: 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .gnome-edit.active {
+    opacity: 1; }
   .gnome-edit--container {
     display: block;
     background-color: #FFF;
@@ -121,17 +126,19 @@
     justify-content: space-between; }
     .gnome-edit--container:first-child {
       border-radius: 8px; }
-  .gnome-edit--attributes-name-input, .gnome-edit--attributes-strenght-input {
+  .gnome-edit--attributes-name-input, .gnome-edit--attributes-age-input, .gnome-edit--attributes-strenght-input {
     padding: 5px;
     font-size: 14px;
     border: 2px solid #E5E5F1;
     border-radius: 6px; }
-    .gnome-edit--attributes-name-input:focus, .gnome-edit--attributes-strenght-input:focus {
+    .gnome-edit--attributes-name-input:focus, .gnome-edit--attributes-age-input:focus, .gnome-edit--attributes-strenght-input:focus {
       border: 2px solid #AC1072;
       outline: none; }
+    .gnome-edit--attributes-name-input.wrong, .gnome-edit--attributes-age-input.wrong, .gnome-edit--attributes-strenght-input.wrong {
+      border: 2px solid #D50000; }
   .gnome-edit--attributes-name-input {
     width: 150px; }
-  .gnome-edit--attributes-strenght-input {
+  .gnome-edit--attributes-strenght-input, .gnome-edit--attributes-age-input {
     width: 25px;
     text-align: center; }
   .gnome-edit--button {

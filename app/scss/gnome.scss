@@ -69,6 +69,12 @@
     left: 0;
     width: 100%;
     z-index: 30;
+    opacity: 0;
+    @include transition(all 0.5s linear);
+
+    &.active {
+        opacity: 1;
+    }
 
     &--container {
         display: block;
@@ -85,7 +91,7 @@
     }
 
     &--attributes {
-        &-name-input, &-strenght-input {
+        &-name-input, &-age-input, &-strenght-input {
             padding: 5px;
             font-size: 14px;
             border: 2px solid $border-color;
@@ -95,13 +101,17 @@
                 border: 2px solid $main-color;
                 outline: none;
             }
+
+            &.wrong {
+                border: 2px solid $wrong-color;
+            }
         }
 
         &-name-input {
             width: 150px;
         }
 
-        &-strenght-input {
+        &-strenght-input, &-age-input {
             width: 25px;
             text-align: center;
         }
