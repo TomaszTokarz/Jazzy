@@ -37,14 +37,14 @@ var GnomeEditView = Backbone.Marionette.View.extend({
             this.ui.name.removeClass("wrong");
         };
 
-        if(this.ui.age.val() /100 >= 0 && this.ui.age.val() /100 <= 1 && this.ui.age.val()) {
+        if(this.ui.age.val()/100 >= 0 && this.ui.age.val()/100 <= 1 && this.ui.age.val()) {
             this.ui.age.removeClass("wrong");
         } else {
             this.ui.age.addClass("wrong");
             isValid = false;
         };
 
-        if(this.ui.strenght.val() /100 >= 0 && this.ui.strenght.val() /100 <= 1 && this.ui.strenght.val()) {
+        if(this.ui.strenght.val()/100 >= 0 && this.ui.strenght.val()/100 <= 1 && this.ui.strenght.val()) {
             this.ui.strenght.removeClass("wrong");
         } else {
             this.ui.strenght.addClass("wrong");

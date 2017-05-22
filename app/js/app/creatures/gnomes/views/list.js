@@ -13,7 +13,7 @@ var GnomesCollectionView = Backbone.Marionette.CompositeView.extend( {
         this.addItems();
         this.render();
         this.collection.on('change',this.render,this);
-        app.infiniteScroll();
+        app.layout.infiniteScroll();
     },
 
     addItems: function() {

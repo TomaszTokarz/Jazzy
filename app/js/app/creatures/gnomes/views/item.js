@@ -64,7 +64,7 @@ var GnomeItemView = Backbone.Marionette.View.extend({
             url: "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/"+this.model.id,
             type: "POST",
             data: data,
-            dataType: 'application/json', // lowercase is always preferered though jQuery does it, too.
+            dataType: "application/json",
             success: function(response) {
                 console.log("sucess", response)
             },

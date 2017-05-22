@@ -19,21 +19,9 @@
         justify-content: space-between;
         margin: 0 auto;
 
-        &-left {
+        &-left, &-right {
             display: flex;
             align-items: center;
-        }
-
-        &-right {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    &--logo {
-
-        &-image {
-            height: 36px;
         }
     }
 
@@ -87,11 +75,6 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-
-        &-avatar {
-            height: 40px;
-            float: left;
-        }
 
         &-data {
             width: 140px;

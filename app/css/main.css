@@ -134,14 +134,9 @@ table {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto; }
-    .header--wrapper-left {
+    .header--wrapper-left, .header--wrapper-right {
       display: flex;
       align-items: center; }
-    .header--wrapper-right {
-      display: flex;
-      align-items: center; }
-  .header--logo-image {
-    height: 36px; }
   .header--creatures {
     display: flex;
     align-items: center;
@@ -182,9 +177,6 @@ table {
     display: flex;
     align-items: center;
     cursor: pointer; }
-    .header--user-avatar {
-      height: 40px;
-      float: left; }
     .header--user-data {
       width: 140px;
       font-size: 11px;
@@ -252,8 +244,7 @@ table {
     display: flex;
     align-items: center; }
     .gnome--details--image {
-      padding: 0 14px 0 16px;
-      height: 45px; }
+      padding: 0 15px; }
     .gnome--details--name {
       font-size: 11px;
       float: left;

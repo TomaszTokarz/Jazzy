@@ -30,6 +30,14 @@ var LayoutView = Backbone.Marionette.View.extend({
         });
     },
 
+    infiniteScroll: function() {
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() == $(document).height() ) {
+                app.layout.listView.addItems();
+            }
+        });
+    },
+
     scrollTop: function() {
         $(window).scrollTop(0);
     }
