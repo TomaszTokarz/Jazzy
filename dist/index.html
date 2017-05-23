@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jazzy</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
@@ -77,36 +77,33 @@
             <div class="gnome--attribute">
                 <!-- <progress class="gnome--attribute--bar" max="100" value="<%= strenght %>"></progress> -->
                 <div class="progress-bar">
-                    <div class="progress-bar--indicator-main"></div>
+                    <div class="progress-bar--indicator-main" style="width:<%= strenght %>%"></div>
                     <div class="progress-bar--indicator-secondary"></div>
                 </div>
                 <span class="gnome--attribute--percentage"><%= strenght %>/100</span>
                 <span class="gnome--attribute--name">Strenght</span>
             </div>
-            <div class="gnome-edit"></div>
+            <div class="gnome-edit--wrapper js-gnome-edit"></div>
         </script>
 
         <script type="text/template" id="gnome-edit-template">
             <div class="gnome-edit--container">
-                <figure>
-                    <img class="gnome--details--image" src="images/gnome.png" />
-                </figure>
-                <span class="gnome-edit--attributes-id">ID: <%= id %></span>
-                <div>
-                    <span class="gnome-edit--attributes-name">Name: </span>
-                    <input class="gnome-edit--attributes-name-input js-edit-name" type="text" value="<%= name %>"></input>
+                <img class="gnome-edit--image" src="images/gnome.png" />
+                <div class="gnome-edit--attribute">
+                    <span class="gnome-edit--attribute--name">Name: </span>
+                    <input class="gnome-edit--attribute--input js-edit-name name js-input" type="text" value="<%= name %>"></input>
                 </div>
-                <div>
-                    <span class="gnome-edit--attributes-age">Age: </span>
-                    <input class="gnome-edit--attributes-age-input js-edit-age" type="text" value="<%= age %>"></input>
+                <div class="gnome-edit--attribute">
+                    <span class="gnome-edit--attribute--name">Age: </span>
+                    <input class="gnome-edit--attribute--input js-edit-age js-input" type="number" min="0" max="100" value="<%= age %>"></input>
                 </div>
-                <div>
-                    <span class="gnome-edit--attributes-strenght">Strenght: </span>
-                    <input class="gnome-edit--attributes-strenght-input js-edit-strenght" type="text" value="<%= strenght %>"></input>
+                <div class="gnome-edit--attribute">
+                    <span class="gnome-edit--attribute--name">Strenght: </span>
+                    <input class="gnome-edit--attribute--input js-edit-strenght js-input" type="number" min="0" max="100" value="<%= strenght %>"></input>
                 </div>
                 <div class="gnome-edit--buttons">
                     <span class="gnome-edit--button js-edit-save">Save</span>
-                    <span class="gnome-edit--button js-edit-back">Back</span>
+                    <span class="gnome-edit--button js-edit-back secondary">Back</span>
                 </div>
             </div>
         </script>

@@ -2,9 +2,9 @@
 
 Documentation:
 
-Commands needs to run project:
+Commands needed to run project:
 
-    gulp - and that's all, single command gulp will convers SASS to CSS and run wirtual server. All needed files are instaled by Bower.
-    gulp build - will build a distribution version of a project in "dist" folder, ready tu publish.
+    gulp - and that's all, single command gulp will convert SASS to CSS and run virtual server. All needed files are installed by Bower.
+    gulp build - will build a distribution version of a project in "dist" folder, ready to publish, also published "dist" folder is already built
 
-Project is not finished yet, so don't include needed features
+    Up and running demo version - http://jazzy.cba.pl

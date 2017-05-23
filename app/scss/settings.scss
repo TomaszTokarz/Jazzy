@@ -4,9 +4,9 @@ $font-color: #2A0633;
 $wrong-color: #D50000;
 $border-color: #E5E5F1;
 $border-color-light: #F4F5F7;
-$white: #FFF;
+$white: #FFFFFF;
 $background-color: #F9FAFC;
-$navbar-background: rgba(172, 16 ,114 , 0.5);
+$secondary-color: #999999;
 
 $strenght-bar-main-color: #AC1171;
 $strenght-bar-bright-color: #D6A5C8;
@@ -29,7 +29,6 @@ $header-height: 60px;
         border-radius: $height/2;
         background-color: $strenght-bar-background-color;
         position: relative;
-
 
         &--indicator-main {
             width: 0;
@@ -88,7 +87,6 @@ $header-height: 60px;
             position: absolute;
             top: 0;
             z-index: 20;
-            @include transition(all 1s ease-out);
         }
 
         &--indicator-secondary {
@@ -99,7 +97,6 @@ $header-height: 60px;
             position: absolute;
             top: 0;
             z-index: 10;
-            @include transition(all 1s ease-out);
         }
     }
 }
@@ -133,37 +130,3 @@ $header-height: 60px;
         @include rotate(0deg);
     }
 }
-
-//This mixin below is for HTML5 <progress> bar
-
-// @mixin progress-bar($width, $height) {
-//     progress[value] {
-//         width: $width;
-//         height: $height;
-//         -webkit-appearance: none;
-//        appearance: none;
-//     }
-//
-//     progress {
-//         border-radius: $height/2;
-//         background-color: $strenght-bar-background-color;
-//         border: 0;
-//     }
-//
-//     progress[value]::-webkit-progress-bar {
-//
-//       background-color: $strenght-bar-background-color;
-//       border-radius: $height/2;
-//     }
-//
-//     progress[value]::-webkit-progress-value {
-//
-//         border-radius: $height/2;
-//         background-color: $strenght-bar-main-color;
-//     }
-//
-//     progress::-moz-progress-bar {
-//         background-color: $strenght-bar-main-color;
-//         border-radius: $height/2;
-//     }
-// }

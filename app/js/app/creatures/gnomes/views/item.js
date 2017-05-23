@@ -4,73 +4,34 @@ var GnomeItemView = Backbone.Marionette.View.extend({
     editView: false,
 
     ui: {
-        progressBarMain: ".progress-bar--indicator-main",
-        progressBarSecondary: ".progress-bar--indicator-secondary",
-        editField: ".gnome-edit--container",
-        backBtn : ".js-edit-back",
-        saveBtn : ".js-edit-save",
-        name : ".js-edit-name",
-        age : ".js-edit-age",
-        strenght : ".js-edit-strenght"
+        backBtn: ".js-edit-back",
+        editContainer: ".js-gnome-edit"
     },
 
     events: {
-        "click" : "editGnome",
-        "click @ui.backBtn" : "closeEdit",
-        "click @ui.saveBtn" : "saveGnome"
+        "click": "editGnome",
+        "click @ui.backBtn": "closeEdit",
     },
 
     template: _.template( $("#gnome-item-template").html()),
 
-    onRender: function() {
-        this.setStrengthBar(this.model.attributes.strenght);
-    },
-
-    setStrengthBar: function(primaryAttribute, secondaryAttribute) {
-        $(this.ui.progressBarMain).css("width", primaryAttribute + "%" );
-        // useless for now. There is no secondary attribute.
-        $(this.ui.progressBarSecondary).css("width", secondaryAttribute + "%" );
-    },
-
     editGnome: function() {
         if (!this.editView) {
             this.editView = new GnomeEditView({
-                model: this.model,
-                el: this.$(".gnome-edit")
+                model: this.model
             });
-            this.$(".gnome-edit").addClass("active")
+            this.ui.editContainer.append(this.editView.$el)
+            this.ui.editContainer.addClass("active")
         }
     },
 
     closeEdit: function(event) {
         event.stopPropagation();
-        this.$(".gnome-edit").removeClass("active");
+        this.ui.editContainer.removeClass("active");
+
         setTimeout( function() {
-            this.editView.$el.html("");
+            this.editView.destroy();
             this.editView = false;
-        }.bind(this), 1000);
-    },
-
-    saveGnome: function() {
-        console.log("save");
-        this.editView.getData();
-        if(data) {
-            this.sendData(data);
-        };
-    },
-
-    sendData: function(data) {
-        $.ajax({
-            url: "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/"+this.model.id,
-            type: "POST",
-            data: data,
-            dataType: "application/json",
-            success: function(response) {
-                console.log("sucess", response)
-            },
-            error: function(response) {
-                console.error(response)
-            }
-        });
+        }.bind(this), 500);
     }
 });
