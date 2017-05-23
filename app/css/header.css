@@ -43,6 +43,13 @@
   height: 60px;
   border-bottom: 2px solid #F4F5F7;
   z-index: 100; }
+  @media screen and (max-width: 875px) {
+    .header {
+      font-size: 1em;
+      height: auto; } }
+  @media screen and (max-width: 875px) {
+    .header--logo {
+      padding: 0.5em 0 0 0.5em; } }
   .header--wrapper {
     max-width: 1174px;
     min-width: 875px;
@@ -50,19 +57,36 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto; }
+    @media screen and (max-width: 875px) {
+      .header--wrapper {
+        font-size: 0.65em;
+        max-width: 100%;
+        min-width: 320px; } }
     .header--wrapper-left, .header--wrapper-right {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      justify-content: space-between; }
+      @media screen and (max-width: 875px) {
+        .header--wrapper-left, .header--wrapper-right {
+          width: 100%; } }
   .header--creatures {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-left: 165px; }
+    @media screen and (max-width: 875px) {
+      .header--creatures {
+        font-size: 1em;
+        margin-left: 3em; } }
     .header--creatures-list-item {
       margin-right: 59px;
       float: left;
       cursor: pointer; }
+      @media screen and (max-width: 875px) {
+        .header--creatures-list-item {
+          margin-right: 2.5em; } }
       .header--creatures-list-item:hover {
         -webkit-animation: shiver 0.2s infinite linear;
         -moz-animation: shiver 0.2s infinite linear;
@@ -86,6 +110,11 @@
       cursor: pointer;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
+      @media screen and (max-width: 875px) {
+        .header--creatures-button {
+          width: 11em;
+          line-height: 1.7em;
+          margin-left: 1em; } }
       .header--creatures-button:hover {
         color: #AC1072;
         background-color: #FFFFFF;
@@ -94,6 +123,13 @@
     display: flex;
     align-items: center;
     cursor: pointer; }
+    @media screen and (max-width: 875px) {
+      .header--user {
+        padding-bottom: 0.5em; } }
+    @media screen and (max-width: 875px) {
+      .header--user-avatar {
+        height: 3em;
+        width: 3em; } }
     .header--user-data {
       width: 140px;
       font-size: 11px;
@@ -102,5 +138,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      @media screen and (max-width: 875px) {
+        .header--user-data {
+          width: 12em;
+          font-size: 0.8em;
+          padding-left: 0.5em;
+          line-height: 1.5em; } }
     .header--user-name {
       font-weight: bold; }

@@ -22,11 +22,11 @@ var GnomeEditView = Backbone.Marionette.View.extend({
 
     saveGnome: function() {
         if (this.checkValidation()) {
-            // this.model.save({
-            //     name: this.ui.name.val(),
-            //     age: this.ui.age.val(),
-            //     strenght: this.ui.strenght.val()
-            // }, {patch:true});
+            this.model.save({
+                name: this.ui.name.val(),
+                age: this.ui.age.val(),
+                strenght: this.ui.strenght.val()
+            }, {patch:true});
             // $.ajax({
             //     dataType: 'application/json',
             //     processData: false,
@@ -39,30 +39,9 @@ var GnomeEditView = Backbone.Marionette.View.extend({
             //     }
             // });
             $.ajax({
-                headers : {
-                    "Accept" : "application/json",
-                    "Content-Type" : "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-                    "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
-               },
-                url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/"+ this.model.id,
+                url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/0",
                 type : "PATCH",
-                crossDomain: true,
-                body: JSON.stringify({
-                      name: this.ui.name.val(),
-                      age: this.ui.age.val(),
-                      strenght: this.ui.strenght.val()
-                 }),
-                success : function(response, textStatus, jqXhr) {
-                    console.log("success");
-                },
-                error : function(jqXHR, textStatus, errorThrown) {
-                    console.log("error");
-                },
-                complete : function() {
-                    console.log("Venue Patch Ran");
-                }
+                body: JSON.stringify({name: "test", age: "11", strength: "11"}),
             });
         }
     },

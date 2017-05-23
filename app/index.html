@@ -90,18 +90,20 @@
 
         <script type="text/template" id="gnome-edit-template">
             <div class="gnome-edit--container">
-                <img class="gnome-edit--image" src="images/gnome.png" />
-                <div class="gnome-edit--attribute">
-                    <span class="gnome-edit--attribute--name">Name: </span>
-                    <input class="gnome-edit--attribute--input js-edit-name name js-input" type="text" value="<%= name %>"></input>
-                </div>
-                <div class="gnome-edit--attribute">
-                    <span class="gnome-edit--attribute--name">Age: </span>
-                    <input class="gnome-edit--attribute--input js-edit-age js-input" type="number" min="0" max="100" value="<%= age %>"></input>
-                </div>
-                <div class="gnome-edit--attribute">
-                    <span class="gnome-edit--attribute--name">Strenght: </span>
-                    <input class="gnome-edit--attribute--input js-edit-strenght js-input" type="number" min="0" max="100" value="<%= strenght %>"></input>
+                <div class="gnome-edit--attributes">
+                    <img class="gnome-edit--image" src="images/gnome.png" />
+                    <div class="gnome-edit--attribute">
+                        <span class="gnome-edit--attribute--name">Name: </span>
+                        <input class="gnome-edit--attribute--input js-edit-name name js-input" type="text" value="<%= name %>"></input>
+                    </div>
+                    <div class="gnome-edit--attribute">
+                        <span class="gnome-edit--attribute--name">Age: </span>
+                        <input class="gnome-edit--attribute--input js-edit-age js-input" type="number" min="0" max="100" value="<%= age %>"></input>
+                    </div>
+                    <div class="gnome-edit--attribute">
+                        <span class="gnome-edit--attribute--name">Strenght: </span>
+                        <input class="gnome-edit--attribute--input js-edit-strenght js-input" type="number" min="0" max="100" value="<%= strenght %>"></input>
+                    </div>
                 </div>
                 <div class="gnome-edit--buttons">
                     <span class="gnome-edit--button js-edit-save">Save</span>

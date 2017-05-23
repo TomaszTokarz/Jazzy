@@ -9,6 +9,16 @@
     height: $header-height;
     border-bottom: 2px solid $border-color-light;
     z-index: 100;
+    @include mobile{
+        font-size: 1em;
+        height: auto;
+    };
+
+    &--logo {
+        @include mobile{
+            padding: 0.5em 0 0 0.5em;
+        };
+    }
 
     &--wrapper {
         max-width: $wrapper-width;
@@ -17,11 +27,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0 auto;
+        @include mobile{
+            font-size: 0.65em;
+            max-width: 100%;
+            min-width: $mobile-min-width;
+        };
 
         &-left, &-right {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            @include mobile{
+                width: 100%;
+            };
         }
     }
 
@@ -30,12 +50,20 @@
         align-items: center;
         justify-content: space-around;
         margin-left: 165px;
+        @include mobile{
+            font-size: 1em;
+            margin-left: 3em;
+        };
 
         &-list {
+
             &-item {
                 margin-right: 59px;
                 float: left;
                 cursor: pointer;
+                @include mobile{
+                    margin-right: 2.5em;
+                };
 
                 &:hover {
                     @include animation(shiver 0.2s infinite linear);
@@ -62,6 +90,11 @@
             font-weight: bold;
             cursor: pointer;
             @include transition (all 0.4s ease-in-out);
+            @include mobile{
+                width: 11em;
+                line-height: 1.7em;
+                margin-left: 1em;
+            };
 
             &:hover {
                 color: $main-color;
@@ -75,6 +108,16 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        @include mobile{
+            padding-bottom: 0.5em;
+        };
+
+        &-avatar {
+            @include mobile{
+                height: 3em;
+                width: 3em;
+            };
+        }
 
         &-data {
             width: 140px;
@@ -84,6 +127,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include mobile{
+                width: 12em;
+                font-size: 0.8em;
+                padding-left: 0.5em;
+                line-height: 1.5em;
+            };
         }
 
         &-name {

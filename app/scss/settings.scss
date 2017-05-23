@@ -14,6 +14,7 @@ $strenght-bar-background-color: $border-color;
 
 $wrapper-width: 1174px;
 $wrapper-min-width: 875px;
+$mobile-min-width: 320px;
 $header-height: 60px;
 
 @mixin list-border {
@@ -101,7 +102,13 @@ $header-height: 60px;
     }
 }
 
-@keyframes shake{
+@mixin mobile {
+    @media screen and (max-width: $wrapper-min-width) {
+        @content;
+    }
+}
+
+@keyframes shake {
     0% {
         @include rotate(45deg);
     }

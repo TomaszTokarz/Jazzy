@@ -126,6 +126,13 @@ table {
   height: 60px;
   border-bottom: 2px solid #F4F5F7;
   z-index: 100; }
+  @media screen and (max-width: 875px) {
+    .header {
+      font-size: 1em;
+      height: auto; } }
+  @media screen and (max-width: 875px) {
+    .header--logo {
+      padding: 0.5em 0 0 0.5em; } }
   .header--wrapper {
     max-width: 1174px;
     min-width: 875px;
@@ -133,19 +140,36 @@ table {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto; }
+    @media screen and (max-width: 875px) {
+      .header--wrapper {
+        font-size: 0.65em;
+        max-width: 100%;
+        min-width: 320px; } }
     .header--wrapper-left, .header--wrapper-right {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      justify-content: space-between; }
+      @media screen and (max-width: 875px) {
+        .header--wrapper-left, .header--wrapper-right {
+          width: 100%; } }
   .header--creatures {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-left: 165px; }
+    @media screen and (max-width: 875px) {
+      .header--creatures {
+        font-size: 1em;
+        margin-left: 3em; } }
     .header--creatures-list-item {
       margin-right: 59px;
       float: left;
       cursor: pointer; }
+      @media screen and (max-width: 875px) {
+        .header--creatures-list-item {
+          margin-right: 2.5em; } }
       .header--creatures-list-item:hover {
         -webkit-animation: shiver 0.2s infinite linear;
         -moz-animation: shiver 0.2s infinite linear;
@@ -169,6 +193,11 @@ table {
       cursor: pointer;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
+      @media screen and (max-width: 875px) {
+        .header--creatures-button {
+          width: 11em;
+          line-height: 1.7em;
+          margin-left: 1em; } }
       .header--creatures-button:hover {
         color: #AC1072;
         background-color: #FFFFFF;
@@ -177,6 +206,13 @@ table {
     display: flex;
     align-items: center;
     cursor: pointer; }
+    @media screen and (max-width: 875px) {
+      .header--user {
+        padding-bottom: 0.5em; } }
+    @media screen and (max-width: 875px) {
+      .header--user-avatar {
+        height: 3em;
+        width: 3em; } }
     .header--user-data {
       width: 140px;
       font-size: 11px;
@@ -185,6 +221,12 @@ table {
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      @media screen and (max-width: 875px) {
+        .header--user-data {
+          width: 12em;
+          font-size: 0.8em;
+          padding-left: 0.5em;
+          line-height: 1.5em; } }
     .header--user-name {
       font-weight: bold; }
 
@@ -233,10 +275,14 @@ table {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  cursor: pointer;
   border-left: 1px solid #F4F5F7;
   border-right: 1px solid #F4F5F7;
-  border-bottom: 1px solid #E5E5F1;
-  cursor: pointer; }
+  border-bottom: 1px solid #E5E5F1; }
+  @media screen and (max-width: 875px) {
+    .gnome {
+      height: 3.75em;
+      flex-wrap: wrap; } }
   .gnome:hover {
     background: #F4F5F7; }
   .gnome:first-child {
@@ -248,20 +294,30 @@ table {
     align-items: center; }
     .gnome--details--image {
       padding: 0 15px; }
+      @media screen and (max-width: 875px) {
+        .gnome--details--image {
+          height: 2em; } }
     .gnome--details--name {
       font-size: 11px;
       float: left;
       font-weight: bold; }
+      @media screen and (max-width: 875px) {
+        .gnome--details--name {
+          font-size: 0.6em; } }
     .gnome--details--age {
       font-size: 9px;
       padding-top: 5px;
       width: 100%;
       float: left;
       clear: left; }
+      @media screen and (max-width: 875px) {
+        .gnome--details--age {
+          font-size: 0.5em; } }
   .gnome--attribute {
     font-size: 11px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-around; }
     .gnome--attribute .progress-bar {
       width: 200px;
       height: 10px;
@@ -284,14 +340,47 @@ table {
         position: absolute;
         top: 0;
         z-index: 10; }
+    @media screen and (max-width: 875px) {
+      .gnome--attribute {
+        font-size: 0.5em;
+        width: 100%; }
+        .gnome--attribute .progress-bar {
+          width: 15em;
+          height: 0.5em;
+          border-radius: 0.25em;
+          background-color: #E5E5F1;
+          position: relative; }
+          .gnome--attribute .progress-bar--indicator-main {
+            width: 0;
+            height: 0.5em;
+            border-radius: 0.25em;
+            background-color: #AC1171;
+            position: absolute;
+            top: 0;
+            z-index: 20; }
+          .gnome--attribute .progress-bar--indicator-secondary {
+            width: 0;
+            height: 0.5em;
+            border-radius: 0.25em;
+            background-color: #D6A5C8;
+            position: absolute;
+            top: 0;
+            z-index: 10; } }
     .gnome--attribute--percentage {
       width: 67px;
       padding-right: 16px;
       text-align: right;
       display: inline-block; }
+      @media screen and (max-width: 875px) {
+        .gnome--attribute--percentage {
+          width: 5em;
+          padding-right: 1em; } }
     .gnome--attribute--name {
       margin-right: 16px;
       font-weight: bold; }
+
+.gnome-edit--image {
+  height: 2em; }
 
 .gnome-edit--wrapper {
   position: absolute;
@@ -307,44 +396,68 @@ table {
     opacity: 1; }
 
 .gnome-edit--container {
-  display: block;
   background-color: #FFFFFF;
   border: 1px solid #AC1072;
   height: 47px;
-  padding: 8px 14px; }
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 875px) {
+    .gnome-edit--container {
+      height: 100%;
+      padding: 0 14px; } }
   .gnome-edit--container:first-child {
     border-radius: 8px; }
 
-.gnome-edit--image {
-  display: inline-block;
-  vertical-align: middle; }
+.gnome-edit--attributes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
 
 .gnome-edit--attribute {
-  display: inline-block;
-  margin-right: 30px;
-  margin-left: 10px;
-  vertical-align: middle; }
+  margin-right: 25px;
+  margin-left: 10px; }
+  @media screen and (max-width: 875px) {
+    .gnome-edit--attribute {
+      height: 100%;
+      margin-right: 1em;
+      margin-left: 0.5em; } }
   .gnome-edit--attribute--name {
     font-size: 14px;
     padding-right: 5px; }
+    @media screen and (max-width: 875px) {
+      .gnome-edit--attribute--name {
+        font-size: 0.6em; } }
   .gnome-edit--attribute--input {
     padding: 0 10px;
-    text-align: center;
+    width: 40px;
     font-size: 14px;
-    border: 2px solid #E5E5F1;
-    border-radius: 6px;
     height: 30px;
     line-height: 30px;
     font-weight: bold;
-    width: 50px; }
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #E5E5F1; }
+    @media screen and (max-width: 875px) {
+      .gnome-edit--attribute--input {
+        padding: 0 0.2em;
+        width: 2em;
+        font-size: 0.8em;
+        height: 1.2em;
+        line-height: 1.2em; } }
     .gnome-edit--attribute--input:focus {
       border: 2px solid #AC1072;
       outline: none; }
     .gnome-edit--attribute--input.wrong {
       border: 2px solid #D50000; }
     .gnome-edit--attribute--input.name {
-      width: 200px;
+      width: 160px;
       text-align: left; }
+      @media screen and (max-width: 875px) {
+        .gnome-edit--attribute--input.name {
+          width: 8em; } }
   .gnome-edit--attribute-name-input {
     width: 150px; }
   .gnome-edit--attribute-strenght-input, .gnome-edit--attribute-age-input {
@@ -353,6 +466,12 @@ table {
 .gnome-edit--buttons {
   float: right;
   padding-top: 7px; }
+  @media screen and (max-width: 875px) {
+    .gnome-edit--buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.1em; } }
 
 .gnome-edit--button {
   width: 70px;
@@ -369,6 +488,13 @@ table {
   border-radius: 5px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
+  @media screen and (max-width: 875px) {
+    .gnome-edit--button {
+      width: 4em;
+      height: 1.2em;
+      line-height: 1.2em;
+      font-size: 0.8em;
+      margin-right: 5px; } }
   .gnome-edit--button:hover {
     color: #AC1072;
     background-color: #FFFFFF; }
@@ -385,6 +511,9 @@ table {
   font-size: 20px;
   color: #2A0633;
   background-color: #F9FAFC; }
+  @media screen and (max-width: 875px) {
+    .body {
+      font-size: 5vw; } }
 
 .templates-container {
   display: none; }
@@ -393,10 +522,19 @@ table {
   margin: 140px auto 30px;
   max-width: 1174px;
   min-width: 875px; }
+  @media screen and (max-width: 875px) {
+    .main {
+      margin: 5em auto 2em;
+      max-width: 100%;
+      min-width: 320px; } }
   .main-title {
     font-size: 18px;
     margin-bottom: 27px;
     font-weight: bold; }
+    @media screen and (max-width: 875px) {
+      .main-title {
+        font-size: 0.8em;
+        padding-left: 0.5em; } }
 
 .nav-bar {
   right: 20px;
@@ -411,6 +549,10 @@ table {
   z-index: 200;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
+  @media screen and (max-width: 875px) {
+    .nav-bar {
+      width: 1.8em;
+      height: 1.8em; } }
   .nav-bar-arrow {
     width: 10px;
     height: 10px;
@@ -422,6 +564,12 @@ table {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
+    @media screen and (max-width: 875px) {
+      .nav-bar-arrow {
+        width: 0.6em;
+        height: 0.6em;
+        top: 0.6em;
+        left: 0.5em; } }
   .nav-bar:hover {
     background: #FFFFFF; }
   .nav-bar:hover > .nav-bar-arrow {
