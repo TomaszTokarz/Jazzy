@@ -156,6 +156,10 @@
 
                 &:hover {
                     @include animation(shiver 0.2s infinite linear);
+
+                    @include mobile {
+                        @include animation(none);
+                    }
                 }
 
                 &.active {

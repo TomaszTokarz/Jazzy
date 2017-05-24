@@ -17,6 +17,7 @@ var LayoutView = Backbone.Marionette.View.extend({
 
     onRender: function() {
         this.headerView = new HeaderView();
+        this.consoleView = new ConsoleView();
         this.gnomesCollection = new GnomesCollection({
             fetch: true,
             layoutView: this
@@ -42,5 +43,14 @@ var LayoutView = Backbone.Marionette.View.extend({
         $('body').animate({
             scrollTop: 0
         }, 500);
+    },
+
+    consoleLog: function(type, text) {
+        consoleCollection.add({
+            type: type,
+            text: text
+        }, {
+            at: 0
+        })
     }
 });

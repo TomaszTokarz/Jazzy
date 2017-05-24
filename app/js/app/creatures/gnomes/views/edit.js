@@ -18,6 +18,7 @@ var GnomeEditView = Backbone.Marionette.View.extend({
 
     initialize: function() {
         this.render();
+        this.console = app.layout.consoleView.collection;
     },
 
     saveGnome: function() {
@@ -27,7 +28,13 @@ var GnomeEditView = Backbone.Marionette.View.extend({
                 age: this.ui.age.val(),
                 strenght: this.ui.strenght.val()
             }, {
-                patch:true
+                patch:true,
+                success: function() {
+                    app.layout.consoleLog("success", "Gnome updated successfully");
+                },
+                error: function() {
+                    app.layout.consoleLog("fail", "Gnome update fail");
+                }
             });
 
             // $.ajax({

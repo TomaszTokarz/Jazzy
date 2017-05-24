@@ -295,12 +295,6 @@
   .gnome-edit--button:hover {
     color: #AC1072;
     background-color: #FFFFFF; }
-    @media screen and (max-width: 875px) {
-      .gnome-edit--button:hover {
-        float: right;
-        margin-right: 0;
-        color: #FFFFFF;
-        background-color: #AC1072; } }
   .gnome-edit--button.secondary {
     background: #999999;
     border-color: #999999; }

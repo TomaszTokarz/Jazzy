@@ -31,6 +31,7 @@
         <script type="text/template" id="layout-template">
             <div class="js-header-container"></div>
             <div class="main js-main-container"></div>
+            <div class="console--container js-console-container"></div>
             <div class="nav-bar js-nav-bar">
                 <div class="nav-bar-arrow"></div>
             </div>
@@ -114,6 +115,14 @@
             </div>
         </script>
 
+        <script type="text/template" id="console-template">
+            <ul class="console--list js-console-container"></ul>
+        </script>
+
+        <script type="text/template" id="console-item-template">
+            <span class="<%= type %>"><%= text %></li>
+        </script>
+
     </div>
 
     <!-- build:js js/main.min.js -->
@@ -127,12 +136,16 @@
         <script src="js/app/common/views/layout.js"></script>
         <script src="js/app/common/views/header.js"></script>
 
+        <script src="js/app/common/models/console.model.js"></script>
+        <script src="js/app/common/models/console.collection.js"></script>
+        <script src="js/app/common/views/console.item.js"></script>
+        <script src="js/app/common/views/console.js"></script>
+
         <script src="js/app/creatures/gnomes/models/model.js"></script>
         <script src="js/app/creatures/gnomes/models/collection.js"></script>
         <script src="js/app/creatures/gnomes/views/item.js"></script>
         <script src="js/app/creatures/gnomes/views/list.js"></script>
         <script src="js/app/creatures/gnomes/views/edit.js"></script>
-
 
         <script src="js/app/initialize.js"></script>
     <!-- endbuild -->

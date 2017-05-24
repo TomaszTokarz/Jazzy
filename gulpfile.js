@@ -38,7 +38,7 @@ gulp.task('build', function (callback) {
   )
 });
 
-gulp.task('useref', function(){
+gulp.task('useref', function(cb){
   return gulp.src('app/*.html')
     .pipe(useref())
     // Minifies only if it's a JavaScript file
