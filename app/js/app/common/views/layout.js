@@ -39,6 +39,8 @@ var LayoutView = Backbone.Marionette.View.extend({
     },
 
     scrollTop: function() {
-        $(window).scrollTop(0);
+        $('body').animate({
+            scrollTop: 0
+        }, 500);
     }
 });

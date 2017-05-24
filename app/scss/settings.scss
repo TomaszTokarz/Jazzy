@@ -38,7 +38,7 @@ $header-height: 60px;
             background-color: $strenght-bar-main-color;
             position: absolute;
             top: 0;
-            z-index: 20;
+            z-index: 3;
         }
 
         &--indicator-secondary {
@@ -48,7 +48,7 @@ $header-height: 60px;
             background-color: $strenght-bar-bright-color;
             position: absolute;
             top: 0;
-            z-index: 10;
+            z-index: 2;
         }
     }
 }
@@ -72,36 +72,6 @@ $header-height: 60px;
             transform: rotate($degree);
 }
 
-@mixin progress-bar($width, $height) {
-    .progress-bar {
-        width: $width;
-        height: $height;
-        border-radius: $height/2;
-        background-color: $strenght-bar-background-color;
-        position: relative;
-
-        &--indicator-main {
-            width: 0;
-            height: $height;
-            border-radius: $height/2;
-            background-color: $strenght-bar-main-color;
-            position: absolute;
-            top: 0;
-            z-index: 20;
-        }
-
-        &--indicator-secondary {
-            width: 0;
-            height: $height;
-            border-radius: $height/2;
-            background-color: $strenght-bar-bright-color;
-            position: absolute;
-            top: 0;
-            z-index: 10;
-        }
-    }
-}
-
 @mixin mobile {
     @media screen and (max-width: $wrapper-min-width) {
         @content;
@@ -123,7 +93,7 @@ $header-height: 60px;
     }
 }
 
-@keyframes shiver{
+@keyframes shiver {
     0% {
         @include rotate(0deg);
     }

@@ -20,8 +20,8 @@ var GnomeItemView = Backbone.Marionette.View.extend({
             this.editView = new GnomeEditView({
                 model: this.model
             });
-            this.ui.editContainer.append(this.editView.$el)
-            this.ui.editContainer.addClass("active")
+            this.ui.editContainer.append(this.editView.$el);
+            this.ui.editContainer.addClass("active");
         }
     },
 

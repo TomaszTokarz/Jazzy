@@ -26,23 +26,17 @@ var GnomeEditView = Backbone.Marionette.View.extend({
                 name: this.ui.name.val(),
                 age: this.ui.age.val(),
                 strenght: this.ui.strenght.val()
-            }, {patch:true});
-            // $.ajax({
-            //     dataType: 'application/json',
-            //     processData: false,
-            //     url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/" + this.model.id,
-            //     type : 'PATCH',
-            //     data: {
-            //          name: this.ui.name.val(),
-            //          age: this.ui.age.val(),
-            //          strenght: this.ui.strenght.val()
-            //     }
-            // });
-            $.ajax({
-                url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/0",
-                type : "PATCH",
-                body: JSON.stringify({name: "test", age: "11", strength: "11"}),
+            }, {
+                patch:true
             });
+
+            // $.ajax({
+            //     url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/0",
+            //     type : "PATCH",
+            //     body: JSON.stringify({name: "test", age: "11", strength: "11"}),
+            //     dataType: "text",
+            //     contentType : "text/plain"
+            // });
         }
     },
 

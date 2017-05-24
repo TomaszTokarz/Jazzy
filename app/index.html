@@ -35,15 +35,18 @@
                 <div class="nav-bar-arrow"></div>
             </div>
         </script>
+
         <script type="text/template" id="header-template">
             <header class="header">
                 <div class="header--wrapper">
                     <div class="header--wrapper-left">
                         <img src="images/logo.png" class="header--logo">
                         <div class="header--creatures">
-                            <ul class="header--creatures-list">
+                            <a class="header--creatures--mobile js-mobile-nav-trigger"></a>
+                            <ul class="header--creatures-list js-mobile-nav">
                                 <li class="header--creatures-list-item active">Gnomes</li>
                                 <li class="header--creatures-list-item">Trolls</li>
+                                <li class="header--creatures-list-item mobile">Create monster</li>
                             </ul>
                         </div>
                     </div>
@@ -77,7 +80,6 @@
                 </div>
             </div>
             <div class="gnome--attribute">
-                <!-- <progress class="gnome--attribute--bar" max="100" value="<%= strenght %>"></progress> -->
                 <div class="progress-bar">
                     <div class="progress-bar--indicator-main" style="width:<%= strenght %>%"></div>
                     <div class="progress-bar--indicator-secondary"></div>

@@ -49,7 +49,6 @@
   border-bottom: 1px solid #E5E5F1; }
   @media screen and (max-width: 875px) {
     .gnome {
-      height: 3.75em;
       flex-wrap: wrap; } }
   .gnome:hover {
     background: #F4F5F7; }
@@ -60,27 +59,26 @@
   .gnome--details {
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 875px) {
+      .gnome--details {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        width: 50%; } }
     .gnome--details--image {
       padding: 0 15px; }
       @media screen and (max-width: 875px) {
         .gnome--details--image {
-          height: 2em; } }
+          width: 30px; } }
     .gnome--details--name {
       font-size: 11px;
       float: left;
       font-weight: bold; }
-      @media screen and (max-width: 875px) {
-        .gnome--details--name {
-          font-size: 0.6em; } }
     .gnome--details--age {
       font-size: 9px;
       padding-top: 5px;
       width: 100%;
       float: left;
       clear: left; }
-      @media screen and (max-width: 875px) {
-        .gnome--details--age {
-          font-size: 0.5em; } }
   .gnome--attribute {
     font-size: 11px;
     display: flex;
@@ -99,7 +97,7 @@
         background-color: #AC1171;
         position: absolute;
         top: 0;
-        z-index: 20; }
+        z-index: 3; }
       .gnome--attribute .progress-bar--indicator-secondary {
         width: 0;
         height: 10px;
@@ -107,33 +105,37 @@
         background-color: #D6A5C8;
         position: absolute;
         top: 0;
-        z-index: 10; }
+        z-index: 2; }
     @media screen and (max-width: 875px) {
       .gnome--attribute {
-        font-size: 0.5em;
-        width: 100%; }
+        padding-right: 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        width: 45%;
+        display: block;
+        text-align: right; }
         .gnome--attribute .progress-bar {
-          width: 15em;
-          height: 0.5em;
-          border-radius: 0.25em;
+          width: 100%;
+          height: 5px;
+          border-radius: 2.5px;
           background-color: #E5E5F1;
           position: relative; }
           .gnome--attribute .progress-bar--indicator-main {
             width: 0;
-            height: 0.5em;
-            border-radius: 0.25em;
+            height: 5px;
+            border-radius: 2.5px;
             background-color: #AC1171;
             position: absolute;
             top: 0;
-            z-index: 20; }
+            z-index: 3; }
           .gnome--attribute .progress-bar--indicator-secondary {
             width: 0;
-            height: 0.5em;
-            border-radius: 0.25em;
+            height: 5px;
+            border-radius: 2.5px;
             background-color: #D6A5C8;
             position: absolute;
             top: 0;
-            z-index: 10; } }
+            z-index: 2; } }
     .gnome--attribute--percentage {
       width: 67px;
       padding-right: 16px;
@@ -141,14 +143,23 @@
       display: inline-block; }
       @media screen and (max-width: 875px) {
         .gnome--attribute--percentage {
-          width: 5em;
-          padding-right: 1em; } }
+          margin-top: 10px;
+          width: auto;
+          float: left; } }
     .gnome--attribute--name {
       margin-right: 16px;
       font-weight: bold; }
+      @media screen and (max-width: 875px) {
+        .gnome--attribute--name {
+          display: inline-block;
+          margin-top: 10px;
+          margin-right: 5px;
+          width: auto; } }
 
-.gnome-edit--image {
-  height: 2em; }
+@media screen and (max-width: 875px) {
+  .gnome-edit--image {
+    display: block;
+    margin: 20px auto; } }
 
 .gnome-edit--wrapper {
   position: absolute;
@@ -156,7 +167,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 30;
+  z-index: 20;
   opacity: 0;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear; }
@@ -174,30 +185,50 @@
   flex-wrap: wrap; }
   @media screen and (max-width: 875px) {
     .gnome-edit--container {
-      height: 100%;
-      padding: 0 14px; } }
+      position: fixed;
+      top: 62px;
+      left: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.9);
+      height: auto;
+      z-index: 11;
+      border: none;
+      border-top: 2px solid #AC1072;
+      border-radius: 0;
+      padding: 15px;
+      box-sizing: border-box;
+      width: 100%;
+      display: block; } }
   .gnome-edit--container:first-child {
     border-radius: 8px; }
+    @media screen and (max-width: 875px) {
+      .gnome-edit--container:first-child {
+        border-radius: 0; } }
 
 .gnome-edit--attributes {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media screen and (max-width: 875px) {
+    .gnome-edit--attributes {
+      display: block;
+      text-align: center; } }
 
 .gnome-edit--attribute {
   margin-right: 25px;
   margin-left: 10px; }
   @media screen and (max-width: 875px) {
     .gnome-edit--attribute {
-      height: 100%;
-      margin-right: 1em;
-      margin-left: 0.5em; } }
+      margin: 0 0 20px 0;
+      width: 100%; } }
   .gnome-edit--attribute--name {
     font-size: 14px;
     padding-right: 5px; }
     @media screen and (max-width: 875px) {
       .gnome-edit--attribute--name {
-        font-size: 0.6em; } }
+        padding: 0 0 10px;
+        display: block;
+        font-size: 12px; } }
   .gnome-edit--attribute--input {
     padding: 0 10px;
     width: 40px;
@@ -210,11 +241,13 @@
     border: 2px solid #E5E5F1; }
     @media screen and (max-width: 875px) {
       .gnome-edit--attribute--input {
-        padding: 0 0.2em;
-        width: 2em;
-        font-size: 0.8em;
-        height: 1.2em;
-        line-height: 1.2em; } }
+        width: 100%;
+        box-sizing: border-box;
+        background: #F4F5F7;
+        border-color: #F4F5F7;
+        border-radius: 3px;
+        height: 40px;
+        line-height: 40px; } }
     .gnome-edit--attribute--input:focus {
       border: 2px solid #AC1072;
       outline: none; }
@@ -225,7 +258,8 @@
       text-align: left; }
       @media screen and (max-width: 875px) {
         .gnome-edit--attribute--input.name {
-          width: 8em; } }
+          width: 100%;
+          text-align: center; } }
   .gnome-edit--attribute-name-input {
     width: 150px; }
   .gnome-edit--attribute-strenght-input, .gnome-edit--attribute-age-input {
@@ -236,10 +270,12 @@
   padding-top: 7px; }
   @media screen and (max-width: 875px) {
     .gnome-edit--buttons {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0.1em; } }
+      position: absolute;
+      bottom: 20px;
+      float: none;
+      left: 0;
+      right: 0;
+      padding: 0 20px; } }
 
 .gnome-edit--button {
   width: 70px;
@@ -256,19 +292,22 @@
   border-radius: 5px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
-  @media screen and (max-width: 875px) {
-    .gnome-edit--button {
-      width: 4em;
-      height: 1.2em;
-      line-height: 1.2em;
-      font-size: 0.8em;
-      margin-right: 5px; } }
   .gnome-edit--button:hover {
     color: #AC1072;
     background-color: #FFFFFF; }
+    @media screen and (max-width: 875px) {
+      .gnome-edit--button:hover {
+        float: right;
+        margin-right: 0;
+        color: #FFFFFF;
+        background-color: #AC1072; } }
   .gnome-edit--button.secondary {
     background: #999999;
     border-color: #999999; }
+    @media screen and (max-width: 875px) {
+      .gnome-edit--button.secondary {
+        float: right;
+        margin-right: 0; } }
     .gnome-edit--button.secondary:hover {
       background: #FFFFFF;
       color: #999999; }

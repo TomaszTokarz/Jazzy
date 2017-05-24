@@ -1,5 +1,4 @@
 var app = {
-    gnomes: [],
     init: function() {
         app.layout = new LayoutView();
     }

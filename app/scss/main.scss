@@ -10,9 +10,6 @@
     font-size: 20px;
     color: $font-color;
     background-color: $background-color;
-    @include mobile{
-        font-size: 5vw;
-    };
 }
 
 .templates-container {
@@ -23,20 +20,24 @@
     margin: 140px auto 30px;
     max-width: $wrapper-width;
     min-width: $wrapper-min-width;
-    @include mobile{
-        margin: 5em auto 2em;
+
+    @include mobile {
+        margin: 65px auto 30px;
         max-width: 100%;
         min-width: $mobile-min-width;
-    };
+    }
 
     &-title {
         font-size: 18px;
         margin-bottom: 27px;
         font-weight: bold;
-        @include mobile{
-            font-size: 0.8em;
-            padding-left: 0.5em;
-        };
+
+        @include mobile {
+            font-size: 14px;
+            padding-top: 20px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -50,12 +51,13 @@
     border: 2px solid $main-color;
     position: fixed;
     cursor: pointer;
-    z-index: 200;
+    z-index: 10;
     @include transition(all 0.2s linear);
-    @include mobile{
+
+    @include mobile {
         width: 1.8em;
         height: 1.8em;
-    };
+    }
 
     &-arrow {
         width: 10px;
@@ -71,7 +73,7 @@
             height: 0.6em;
             top: 0.6em;
             left: 0.5em;
-        };
+        }
     }
 
     &:hover {
