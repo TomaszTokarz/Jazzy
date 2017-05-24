@@ -17,20 +17,29 @@
             list-style: none;
             text-align: center;
             @include transition(all 1s ease-out);
-            display: block;
-            padding-right: 20px;
-            background-color: $wrong-color;
-            color: $white;
-            opacity: 0.8;
-            height: 30px;
-            line-height: 30px;
-            border-bottom: 1px solid $white;
+
 
             & .success {
+                display: block;
+                padding-right: 20px;
+                background-color: $wrong-color;
+                color: $white;
+                opacity: 0.8;
+                height: 30px;
+                line-height: 30px;
+                border-bottom: 1px solid $white;
                 background-color: $correct-color;
             }
 
             & .fail {
+                display: block;
+                padding-right: 20px;
+                background-color: $wrong-color;
+                color: $white;
+                opacity: 0.8;
+                height: 30px;
+                line-height: 30px;
+                border-bottom: 1px solid $white;
                 background-color: $wrong-color;
             }
 

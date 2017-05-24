@@ -34,16 +34,8 @@ var GnomeEditView = Backbone.Marionette.View.extend({
                 },
                 error: function() {
                     app.layout.consoleLog("fail", "Gnome update fail");
-                }
+                }.bind(this)
             });
-
-            // $.ajax({
-            //     url : "http://master.datasource.jazzy-hr.jzapp.io/api/v1/gnomes/0",
-            //     type : "PATCH",
-            //     body: JSON.stringify({name: "test", age: "11", strength: "11"}),
-            //     dataType: "text",
-            //     contentType : "text/plain"
-            // });
         }
     },
 

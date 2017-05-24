@@ -656,18 +656,26 @@ table {
   list-style: none;
   text-align: center;
   -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  display: block;
-  padding-right: 20px;
-  background-color: #D50000;
-  color: #FFFFFF;
-  opacity: 0.8;
-  height: 30px;
-  line-height: 30px;
-  border-bottom: 1px solid #FFFFFF; }
+  transition: all 1s ease-out; }
   .console--list-item .success {
+    display: block;
+    padding-right: 20px;
+    background-color: #D50000;
+    color: #FFFFFF;
+    opacity: 0.8;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #FFFFFF;
     background-color: #00D500; }
   .console--list-item .fail {
+    display: block;
+    padding-right: 20px;
+    background-color: #D50000;
+    color: #FFFFFF;
+    opacity: 0.8;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #FFFFFF;
     background-color: #D50000; }
   .console--list-item.fade {
     opacity: 0; }
